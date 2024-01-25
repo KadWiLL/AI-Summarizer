@@ -1,0 +1,31 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
+
+name: Node.js CI/CD
+
+on: [push] 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [16.16.0]
+    steps:
+      - name: Deploying to Digitalocean droplet
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secret.HOST }}
+          username: ${{ secret.USERNAME }}
+          password: ${{ secret.PASSWORD }}
+          #port
+          script:
+            cd ai-summerizer
+            git pull
+            export NBM_DIR=`/.nvm
+            source ~/.nvm/nvm.sh
+            npm install
+            npm run build
+            pm2 reload office-site
+
