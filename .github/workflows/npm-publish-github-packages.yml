@@ -20,7 +20,7 @@ jobs:
           username: root
           password: kadwill
           #port
-          script:
+          script: |
             cd ai-summerizer
             git pull
             export NVM_DIR=~/.nvm
