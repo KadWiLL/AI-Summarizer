@@ -22,7 +22,7 @@ jobs:
           #port
           script: |
             ls
-            cd ai-summerizer
+            cd AI-Summarizer
             git pull
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
