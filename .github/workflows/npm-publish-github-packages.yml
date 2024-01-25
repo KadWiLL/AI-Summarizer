@@ -21,6 +21,7 @@ jobs:
           password: kadwill
           #port
           script: |
+            ls
             cd ai-summerizer
             git pull
             export NVM_DIR=~/.nvm
