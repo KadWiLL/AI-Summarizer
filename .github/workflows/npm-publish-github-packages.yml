@@ -16,9 +16,9 @@ jobs:
       - name: Deploying to Digitalocean droplet
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secret.HOST }}
-          username: ${{ secret.USERNAME }}
-          password: ${{ secret.PASSWORD }}
+          host: 138.68.128.113
+          username: root
+          password: kadwill
           #port
           script:
             cd ai-summerizer
