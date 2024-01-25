@@ -23,7 +23,7 @@ jobs:
           script:
             cd ai-summerizer
             git pull
-            export NBM_DIR=`/.nvm
+            export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
             npm install
             npm run build
