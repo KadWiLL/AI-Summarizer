@@ -28,6 +28,5 @@ jobs:
             source ~/.nvm/nvm.sh
             npm install
             npm run build
-            pm2 start npm --name "office-site" -- start
             pm2 reload office-site
 
